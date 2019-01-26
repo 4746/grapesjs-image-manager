@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>GrapesJS Plugin Image Manager</title>
+    <link href="https://unpkg.com/grapesjs/dist/css/grapes.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/grapesjs"></script>
+    <script src="index.js"></script>
+    <style>
+        body, html{ height: 100%; margin: 0;}
+    </style>
+</head>
+<body>
+
+<div id="gjs" style="height:0px; overflow:hidden">
+    <img src="http://placehold.it/350x250/78c5d6/fff/image1.jpg"/>
+</div>
+
+<script type="text/javascript">
+    var editor = grapesjs.init({
+        height: '100%',
+        noticeOnUnload: 0,
+        storageManager:{autoload: 0},
+        container : '#gjs',
+        fromElement: true,
+        assetManager: {
+            assets: [
+                { type: 'image', src : 'http://placehold.it/350x250/78c5d6/fff/image1.jpg', height:350, width:250},
+            ]
+        },
+        plugins: ['gjs-image-manager'],
+        pluginsOpts: {
+            'gjs-image-manager': {
+              url: 'http://binotel.local/api/file-manager',
+              headers: {
+                'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImI3YWEyMThiZGQ3ZDM2ZjgxYjQ3NjM4ZjVmOTc4NjlhZDJmMDI1NzU4NWRlZWQyZmFlODhhN2JhZjJjMTRlYzc4ZmJjZDJlOTkyZjBmNzBiIn0.eyJhdWQiOiIxIiwianRpIjoiYjdhYTIxOGJkZDdkMzZmODFiNDc2MzhmNWY5Nzg2OWFkMmYwMjU3NTg1ZGVlZDJmYWU4OGE3YmFmMmMxNGVjNzhmYmNkMmU5OTJmMGY3MGIiLCJpYXQiOjE1NDg0OTExMjcsIm5iZiI6MTU0ODQ5MTEyNywiZXhwIjoxNTgwMDI3MTI3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Dmu3LKBkz07BPkyfkC5L-qivOlSk_dVzZF0rwkgbdBRpEZxEi8U0XJHbkWMJCWgYtT0Ym4UzJv5ONd2Bd8ao9c_uxV_viiupNSTzk9RhGwxomjufMdpHPJjdqhL42Fkbbr8aBpkNsvwZ3hLb42r6n7__I9bIdnf8fVbTopZpHDOZ_g38L3yUFgJg2F8hN09yJCzetiiB7qx13t-xjDE06ETVwBaEi0MUrWMntOlibvaqBsBI_2t40_rUu_snfFgedthG5b3ey7YcaERh1oojVEXpF8jvoIzS7xvBASt9hUAxxOj2ym2NrWiKDEpZP-AviSj7p73vgRwJnvyArrSa2PqFSnM-wNKaIRWXrb6-v4ZI1lAc7Gdt0_LUnPtH7g0qSHHoiWgFfuhkGsj55V2I1GIAKKyntk8FdflMXhCz6quOn9hqtCkRty7p9g9yPO0SdUbGCjRCTFUyBPxdL2EIpaZMLmj9TSBkvG0Dlvden7LFRwv3ZGKbGNPRlSBvca-ZfeF92pn-SHFfAuyoaTmV7v6sovbn0WvyJCmmjQNpXCNnwb7-NY24EvejvEEBCekMluuygLzU1oDyXGlFFXFCvYcwjaJ0AnJA-BNHM-tR63dBZx4ubmKTYhVK4zsx6vnOtiTPpkk4t5NCtnPejdqX2rZbAyaKG41GYj__QUvlMU0'
+              },
+              beforeSetSrc: (src) => {
+                return 'http://binotel.local/' + src;
+              },
+              beforeSend: function (path) {
+                return path.split('/').slice(1).join('/');
+              }
+            }
+        }
+    });
+</script>
+</body>
+</html>
