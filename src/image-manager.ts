@@ -213,11 +213,12 @@ export class ImageManager {
       } else {
         return res.text().then(text => Promise.reject(text));
       }
-    }).catch((e) => {
+    }).catch((e :any) => {
       setTimeout(() => {
         this.loader.hidden = true;
       }, 200);
-      return e;
+      this.modalContent.insertAdjacentHTML('beforeend', `<p>Error connect to server - (<small>${e.toString()}</small>)</p>`);
+      return e.text().then((er:  any) => Promise.reject(er));
     });
   }
 }
