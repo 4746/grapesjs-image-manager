@@ -25,7 +25,7 @@
 
 ## Download
 
-* `npm i grapesjs-image-manager`
+* `npm i @107v/grapesjs-image-manager`
 
 
 
