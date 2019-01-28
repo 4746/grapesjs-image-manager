@@ -1,10 +1,8 @@
 const path = require('path');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const fs = require('fs');
 let plugins = [];
 let rules = [];
-console.log('*********', process.env.NODE_ENV );
 
 const isProduction = process.env.NODE_ENV === 'production';
 

@@ -31,12 +31,12 @@
         plugins: ['gjs-image-manager'],
         pluginsOpts: {
             'gjs-image-manager': {
-              url: 'http://binotel.local/api/file-manager',
+              url: 'http://localhost/api/file-manager',
               headers: {
-                'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImI3YWEyMThiZGQ3ZDM2ZjgxYjQ3NjM4ZjVmOTc4NjlhZDJmMDI1NzU4NWRlZWQyZmFlODhhN2JhZjJjMTRlYzc4ZmJjZDJlOTkyZjBmNzBiIn0.eyJhdWQiOiIxIiwianRpIjoiYjdhYTIxOGJkZDdkMzZmODFiNDc2MzhmNWY5Nzg2OWFkMmYwMjU3NTg1ZGVlZDJmYWU4OGE3YmFmMmMxNGVjNzhmYmNkMmU5OTJmMGY3MGIiLCJpYXQiOjE1NDg0OTExMjcsIm5iZiI6MTU0ODQ5MTEyNywiZXhwIjoxNTgwMDI3MTI3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Dmu3LKBkz07BPkyfkC5L-qivOlSk_dVzZF0rwkgbdBRpEZxEi8U0XJHbkWMJCWgYtT0Ym4UzJv5ONd2Bd8ao9c_uxV_viiupNSTzk9RhGwxomjufMdpHPJjdqhL42Fkbbr8aBpkNsvwZ3hLb42r6n7__I9bIdnf8fVbTopZpHDOZ_g38L3yUFgJg2F8hN09yJCzetiiB7qx13t-xjDE06ETVwBaEi0MUrWMntOlibvaqBsBI_2t40_rUu_snfFgedthG5b3ey7YcaERh1oojVEXpF8jvoIzS7xvBASt9hUAxxOj2ym2NrWiKDEpZP-AviSj7p73vgRwJnvyArrSa2PqFSnM-wNKaIRWXrb6-v4ZI1lAc7Gdt0_LUnPtH7g0qSHHoiWgFfuhkGsj55V2I1GIAKKyntk8FdflMXhCz6quOn9hqtCkRty7p9g9yPO0SdUbGCjRCTFUyBPxdL2EIpaZMLmj9TSBkvG0Dlvden7LFRwv3ZGKbGNPRlSBvca-ZfeF92pn-SHFfAuyoaTmV7v6sovbn0WvyJCmmjQNpXCNnwb7-NY24EvejvEEBCekMluuygLzU1oDyXGlFFXFCvYcwjaJ0AnJA-BNHM-tR63dBZx4ubmKTYhVK4zsx6vnOtiTPpkk4t5NCtnPejdqX2rZbAyaKG41GYj__QUvlMU0'
+                'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijg1YzliMmNjYzAwMjUyOTU0YTM3ZmI2YmM3NDJjMDM0YjA0ZDYwNmJjN2M1Nzk1NjU0NzQ2MTAyZmFiNjM5NTIxN2YzZGFkMDE2MDU3ZDljIn0.eyJhdWQiOiIxIiwianRpIjoiODVjOWIyY2NjMDAyNTI5NTRhMzdmYjZiYzc0MmMwMzRiMDRkNjA2YmM3YzU3OTU2NTQ3NDYxMDJmYWI2Mzk1MjE3ZjNkYWQwMTYwNTdkOWMiLCJpYXQiOjE1NDg2NjA2MzUsIm5iZiI6MTU0ODY2MDYzNSwiZXhwIjoxNTgwMTk2NjM1LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.NxKRazsaVeN2Oq3UGR93JPACAG1nnqoVC37EE5dI3PmHERgLNMnRF4lvOn7r69GxhcxJ3HAmCIxyUuGsDckJFP0Cr274pYQQkN3Xu8phYIuel8PW-3d9WW5PZejCxqHi7K2wTaEwkHMoY1UoaWq9ubDKmZZ317kRxwwb_WBKLre-2PUerY0IFH69ei-Lf3dRz9oRJjCp08zqKzLvMzFZf1UgqeKvl4KEmEhA1l3bWGu20Hu6M-rXhGntBrfCh41pwneTGcP98Sg9unkyhH9jrWv-X_4TvKxBtDCQvYJ1IQVTvq54QcTSSw4MwjzQPxX39UOiJU2mzVVVgZSbDLfOzr3NDR09nmxb3YJvAHR2HkiRrhejKW2asvPoTw4gksOhj40X2pGwEzlTAbL6WCcwVqaRW53eLCoV-sXRNx_D_IZ6qd01nrklWKpkexUh0seTO8Nr4aPWJKjhfQ9HnaPyuGxqvNl6YYZJgvCkjzmO9oSGhBWjRDsj_8mHeO45Rn776bRHmPBfQO9serBoKihJFpSVAUe5_BkPgBAqj9s6Vrb628Kikua8tclI0aYL7bFRzJvlCBpzw6kNIom6GTHYLCEJQ4cvmbfUi4TRaj0-IGwZgH5gvQEjn3sJmGcfmc3GQWtWbU95_7Ei--apbT_G0O27K--WuPbcGLPrsMUcGrc'
               },
               beforeSetSrc: (src) => {
-                return 'http://binotel.local/' + src;
+                return 'http://localhost/' + src;
               },
               beforeSend: function (path) {
                 return path.split('/').slice(1).join('/');

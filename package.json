@@ -1,7 +1,8 @@
 {
-  "name": "grapesjs-image-manager",
+  "name": "@107v/grapesjs-image-manager",
   "version": "1.0.0",
   "description": "grapesjs Image manager",
+  "keywords": ["grapesjs", "gjs", "Image", "manager"],
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -15,7 +16,7 @@
     "url": "git+https://github.com/4746/grapesjs-image-manager.git"
   },
   "author": "Vadim",
-  "license": "BSD-3-Clause",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/4746/grapesjs-image-manager/issues"
   },
