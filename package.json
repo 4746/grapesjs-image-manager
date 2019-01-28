@@ -1,6 +1,6 @@
 {
   "name": "@107v/grapesjs-image-manager",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "grapesjs Image manager",
   "keywords": ["grapesjs", "gjs", "Image", "manager"],
   "main": "dist/index.js",
