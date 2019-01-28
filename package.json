@@ -9,7 +9,8 @@
     "serve": "webpack-dev-server --progress --color --mode=development",
     "serve:prod": "cross-env NODE_ENV=production webpack-dev-server --color --mode=production",
     "build:prod": "webpack --config webpack.prod.config.js",
-    "prepare": "npm run build:prod"
+    "prepare": "npm run build:prod",
+    "npm-publish": "npm publish --access public"
   },
   "repository": {
     "type": "git",
