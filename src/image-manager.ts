@@ -78,15 +78,17 @@ export class ImageManager {
 
       const target = this.editor.getSelected();
 
-      if (!this.editor.AssetManager.get('http://binotel.local/' + item)) {
-        this.editor.AssetManager.add('http://binotel.local/' + item);
+      const src = this.getImageSrc(item);
+
+      if (!this.editor.AssetManager.get(src)) {
+        this.editor.AssetManager.add(src);
       }
 
       if (target) {
-        if (target.get('type') === 'image') {
-          target.set('src', this.getImageSrc(item));
+        if (target.get('type') === 'image' || target.get('tagName') === 'img') {
+          target.set('src', src);
         } else {
-          target.setStyle({'background-image': `url(${this.getImageSrc(item)})`});
+          target.setStyle({'background-image': `url(${src})`});
         }
         this.modal.close();
         if (this.options.afterChoosingRunOpenAssets) {
