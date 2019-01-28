@@ -1,5 +1,8 @@
 # GrapesJS  image manager
 
+[![NPM Version][npm-image]][npm-url]
+[![NPM Downloads][downloads-image]][downloads-url]
+
 ## Options
 
 * `url` Server url, default: `null`,
@@ -77,3 +80,9 @@ $ npm serve
 
 
 ## MIT License
+
+[npm-url]: https://www.npmjs.com/package/@107v/grapesjs-image-manager
+[npm-image]: https://img.shields.io/npm/v/@107v/grapesjs-image-manager.svg
+
+[downloads-image]: https://img.shields.io/npm/dm/@107v/grapesjs-image-manager.svg
+[downloads-url]: https://npmjs.org/package/@107v/grapesjs-image-manager
